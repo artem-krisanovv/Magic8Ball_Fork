@@ -17,15 +17,8 @@ class ViewController: UIViewController {
     
     
     @IBAction func tellButton(_ sender: UIButton) {
-        if textFieldValue.text! != "" {
-            ballValue.image = ballArray[Int.random(in: 0...4)]
-            textFieldValue.text = ""
-        }
+        ballValue.image = ballArray.randomElement()
+        textFieldValue.text = ""
     }
-    
-    
-
-
-
 }
 
